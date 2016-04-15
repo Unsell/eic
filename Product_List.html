@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>易云平台</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" type="text/css" href="css/cloud-admin.css" >
+	<link rel="stylesheet" type="text/css"  href="css/default.css" id="skin-switcher" >
+
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/Product_List.css"/>
+
+
+</head>
+<body>
+	<!-- HEADER -->
+	<header class="navbar clearfix" id="header">
+		<div class="container">
+				<div class="navbar-brand">
+					<a href="index.html">
+						<img src="img/logo/logo.png" alt="易云 Logo" class="img-responsive" height="30" width="120">
+					</a>
+					<div class="visible-xs">
+						<a href="#" class="team-status-toggle switcher btn dropdown-toggle">
+							<i class="fa fa-users"></i>
+						</a>
+					</div>
+				</div>
+
+				<ul class="nav navbar-nav pull-right">
+
+					<li class="dropdown user" id="header-user">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<img alt="" src="img/avatars/avatar3.jpg" />
+							<span class="username">adam</span>
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#"><i class="fa fa-user"></i> 个人资料</a></li>
+							<!--
+							<li><a href="#"><i class="fa fa-cog"></i> 基础设置</a></li>
+							<li><a href="#"><i class="fa fa-eye"></i> Privacy Settings</a></li>
+							-->
+							<li><a href="login.html"><i class="fa fa-power-off"></i> 退出登录</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+		</div>
+
+	</header>
+	<!--/HEADER -->
+	<div class="copyrights"></div>
+	<!-- PAGE -->
+	<section id="page">
+				<!-- SIDEBAR -->
+				<div id="sidebar" class="sidebar">
+					<div class="sidebar-menu nav-collapse">
+
+						<ul>
+							<li class="active">
+								<a href="">
+								<i class="fa fa-tachometer fa-fw"></i> <span class="menu-text">导览</span>
+								<span class="selected"></span>
+								</a>					
+							</li>
+							<li>
+								<a href="">
+								<i class="fa fa-tachometer fa-fw"></i> <span class="menu-text">二维码管理</span>
+								<span class="selected"></span>
+								</a>					
+							</li>
+							<li class="has-sub">
+								<a href="javascript:;" class="">
+								<i class="fa fa-bookmark-o fa-fw"></i> <span class="menu-text">运营管理</span>
+								<span class="arrow"></span>
+								</a>
+								<ul class="sub">
+									<li><a class="" href=""><span class="sub-menu-text">积分管理</span></a></li>
+									<li><a class="" href=""><span class="sub-menu-text">活动管理</span></a></li>
+								</ul>
+							</li>
+							<li><a class="" href=""><i class="fa fa-envelope-o fa-fw"></i> <span class="menu-text">产品管理</span></a></li>
+							<li class="has-sub">
+								<a href="javascript:;" class="">
+								<i class="fa fa-table fa-fw"></i> <span class="menu-text">数据报表</span>
+								<span class="arrow"></span>
+								</a>
+								<ul class="sub">
+									<li><a class="" href=""><span class="sub-menu-text">防伪码统计</span></a></li>
+									<li><a class="" href=""><span class="sub-menu-text">活动数据统计</span></a></li>
+								</ul>
+							</li>
+							<li class="has-sub">
+								<a href="javascript:;" class="">
+								<i class="fa fa-pencil-square-o fa-fw"></i> <span class="menu-text">增值功能</span>
+								<span class="arrow"></span>
+								</a>
+								<ul class="sub">
+									<li><a class="" href=""><span class="sub-menu-text">企业手机站</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+		<div id="main-content">
+			<div class="container">
+				<div class="row">
+					<div id="content" class="">
+						<div class="tabbable header-tabs">
+							  <ul class="nav nav-tabs">
+								 <li class="active">
+								 	<a href="#box_tab1" data-toggle="tab">
+								 		<span class="hidden-inline-mobile">产品列表</span>
+								 		<i class="fa fa-times icon-close"></i>
+								 	</a>
+								 </li>
+							  </ul>
+							  <div class="tab-content">
+								<div class="tab-pane fade in active" id="box_tab1">
+									
+									<div class="form-search">
+										<form action="" class="form-inline clearfix">
+											<div class="form-group">
+										    	<label for="commodityType">类型 :</label>
+										    	<select class="form-control" id="commodityType">
+												  <option>粮油</option>
+												  <option>奶制品</option>
+												  <option>3</option>
+												  <option>4</option>
+												  <option>5</option>
+												</select>
+										  	</div>
+										  	<div class="input-group">
+										  		<label for="keyword">关键字 :</label>
+											    <input type="text" class="form-control" id="keyword">
+											    <span class="input-group-btn">
+													<button class="btn btn-default btn-search" type="button">搜索</button>
+											  	</span>
+											</div>
+										</form>
+									</div>
+									<div class="box-table-product clearfix">
+										<button type="button" class="btn btn-default btn-produce">生成产品</button>
+										
+										<table class="table table-bordered table-product">
+											<thead>
+											  <tr>
+												<th>序号</th>
+												<th>产品名称</th>
+												<th>类型</th>
+												<th>商品码</th>
+												<th>保质期</th>
+												<th>零售价</th>
+												<th>二维码总数</th>
+												<th>产品产生时间</th>
+												<th>产品二维码</th>
+												<th>操作</th>
+											  </tr>
+											</thead>
+											<tbody>
+											  <tr>
+												<td>1</td>
+												<td>蒙牛</td>
+												<td>奶制品</td>
+												<td>12344</td>
+												<td>18个月</td>
+												<td>4.5</td>
+												<td>100000</td>
+												<td>2016-04-13</td>
+												<td>
+													<img class="QR-code" src="" width="70px" height="70px"/>
+												</td>
+												<td>
+													<a href="">查看</a>
+													<a href="">编辑</a>
+													<a href="#delete-product" class="delete-product" data-toggle="modal">删除</a>
+												</td>
+											  </tr>
+											  
+											</tbody>
+										</table>
+										
+										
+									</div>
+									
+								</div>
+								
+							  </div>
+						   </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--弹窗-删除-->
+		<div class="modal fade in" id="delete-product" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				  <h4 class="modal-title">提示</h4>
+				</div>
+				<div class="modal-body">
+				  你是否要删除***？
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				  <button type="button" class="btn btn-primary">确定</button>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!--弹窗-放大二维码-->
+		<div class="backdrop popup-QRcode">
+			<div class="box-QRcode">
+				<span class="close-popup"><i class="fa fa-times"></i></span>
+				<img src="" width="100%" height="100%"/>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery-2.1.0.js"></script>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.flot.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/Product_List.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		jQuery('.sidebar-menu .has-sub > a').click(function () {
+			var last = jQuery('.has-sub.open', $('.sidebar-menu'));
+            last.removeClass("open");
+            jQuery('.arrow', last).removeClass("open");
+            jQuery('.sub', last).slideUp(200);
+            
+			var thisElement = $(this);
+			var slideOffeset = -200;
+            var slideSpeed = 200;
+			
+            var sub = jQuery(this).next();
+            if (sub.is(":visible")) {
+                jQuery('.arrow', jQuery(this)).removeClass("open");
+                jQuery(this).parent().removeClass("open");
+				sub.slideUp(slideSpeed, function () {
+					if ($('#sidebar').hasClass('sidebar-fixed') == false) {
+						App.scrollTo(thisElement, slideOffeset);
+					}
+					handleSidebarAndContentHeight();
+                });
+            } else {
+                jQuery('.arrow', jQuery(this)).addClass("open");
+                jQuery(this).parent().addClass("open");
+                sub.slideDown(slideSpeed, function () {
+					if ($('#sidebar').hasClass('sidebar-fixed') == false) {
+						App.scrollTo(thisElement, slideOffeset);
+					}
+					handleSidebarAndContentHeight();
+                });
+            }
+        });
+		
+
+		jQuery('.sidebar-menu .has-sub .sub .has-sub-sub > a').click(function () {
+            var last = jQuery('.has-sub-sub.open', $('.sidebar-menu'));
+            last.removeClass("open");
+            jQuery('.arrow', last).removeClass("open");
+            jQuery('.sub', last).slideUp(200);
+                
+            var sub = jQuery(this).next();
+            if (sub.is(":visible")) {
+                jQuery('.arrow', jQuery(this)).removeClass("open");
+                jQuery(this).parent().removeClass("open");
+                sub.slideUp(200);
+            } else {
+                jQuery('.arrow', jQuery(this)).addClass("open");
+                jQuery(this).parent().addClass("open");
+                sub.slideDown(200);
+            }
+        });
+        
+		var handleSidebarAndContentHeight = function () {
+	        var content = $('#content');
+	        var sidebar = $('#sidebar');
+	        var body = $('body');
+	        var height;
+	
+	        if (body.hasClass('sidebar-fixed')) {
+	            height = $(window).height() - $('#header').height() + 1;
+	        } else {
+	            height = sidebar.height() + 20;
+	        }
+	        if (height >= content.height()) {
+	            content.attr('style', 'min-height:' + height + 'px !important');
+	        }
+    	}
+	</script>
+</body>
+</html>

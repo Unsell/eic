@@ -1,0 +1,84 @@
+
+
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+#content{
+	padding-bottom: 0;
+}
+.nav-tabs{
+	border-top: 1px solid #ddd;
+}
+.nav-tabs>li>a{
+	border-radius: 0;
+}
+.hidden-inline-mobile{
+	display: inline-block;
+	margin: 0 20px;
+}
+i.icon-close:hover{
+	color: red;
+	cursor: pointer;
+}
+
+#box_tab1{
+	padding: 30px 3% 30px 3%;
+	position: relative;
+}
+
+#create-activify>.form-group label{
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
+	width: 120px;
+}
+#create-activify .form-group input{
+	display: inline-block;
+	width: 230px;
+}
+#create-activify>.title{
+	font-size: 19px;
+	font-weight: bold;
+	margin: 20px 0 15px;
+}
+.create-setting>.title{
+	display: inline-block;
+	font-size: 16px;
+	width: 120px;	
+	margin-bottom: 25px;
+}
+.create-setting .form-inline{
+	margin-left: 130px;
+	margin-bottom: 15px;
+}
+.create-setting .form-inline .form-group label{
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
+}
+.btn-subActivity, .btn-addActivity{
+	width: 120px;
+	margin-right: 20px;
+}
+.create-setting .form-inline .form-group{
+	margin-right: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+

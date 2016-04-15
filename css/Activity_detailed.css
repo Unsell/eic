@@ -1,0 +1,76 @@
+
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+#content{
+	padding-bottom: 0;
+}
+.nav-tabs{
+	border-top: 1px solid #ddd;
+}
+.nav-tabs>li>a{
+	border-radius: 0;
+}
+.hidden-inline-mobile{
+	display: inline-block;
+	margin: 0 20px;
+}
+i.icon-close:hover{
+	color: red;
+	cursor: pointer;
+}
+
+#box_tab1{
+	padding: 30px 3% 30px 3%;
+	position: relative;
+}
+.activity-infor{
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+.setting-title{
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.activity-infor ul, .activity-infor li{
+	list-style-type: none;
+}
+.prize-list .list{
+	margin-bottom: 15px;
+	width: 60%;
+}
+.prize-list .list:first-child{
+	margin-top: 15px;
+}
+.prize-list .prize-content {
+	display: inline-block;
+	min-width: 130px;
+}
+.btn-editor{
+	width: 120px;
+	position: absolute;
+	left: 50%;
+	top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

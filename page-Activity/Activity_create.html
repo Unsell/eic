@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>易云平台</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" type="text/css" href="../css/cloud-admin.css" >
+	<link rel="stylesheet" type="text/css"  href="../css/default.css" id="skin-switcher" >
+
+	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../js/bootstrapDatepickr-1.0.0/bootstrapDatepickr-1.0.0.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/Activity_create.css"/>
+
+
+</head>
+<body>
+	<!-- HEADER -->
+	<header class="navbar clearfix" id="header">
+		<div class="container">
+				<div class="navbar-brand">
+					<a href="index.html">
+						<img src="img/logo/logo.png" alt="易云 Logo" class="img-responsive" height="30" width="120">
+					</a>
+					<div class="visible-xs">
+						<a href="#" class="team-status-toggle switcher btn dropdown-toggle">
+							<i class="fa fa-users"></i>
+						</a>
+					</div>
+				</div>
+
+				<ul class="nav navbar-nav pull-right">
+
+					<li class="dropdown user" id="header-user">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<img alt="" src="img/avatars/avatar3.jpg" />
+							<span class="username">adam</span>
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#"><i class="fa fa-user"></i> 个人资料</a></li>
+							<!--
+							<li><a href="#"><i class="fa fa-cog"></i> 基础设置</a></li>
+							<li><a href="#"><i class="fa fa-eye"></i> Privacy Settings</a></li>
+							-->
+							<li><a href="login.html"><i class="fa fa-power-off"></i> 退出登录</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+		</div>
+
+	</header>
+	<!--/HEADER -->
+	<div class="copyrights"></div>
+	<!-- PAGE -->
+	<section id="page">
+				<!-- SIDEBAR -->
+				<div id="sidebar" class="sidebar">
+					<div class="sidebar-menu nav-collapse">
+
+						<ul>
+							<li class="active">
+								<a href="">
+								<i class="fa fa-tachometer fa-fw"></i> <span class="menu-text">导览</span>
+								<span class="selected"></span>
+								</a>					
+							</li>
+							<li>
+								<a href="">
+								<i class="fa fa-tachometer fa-fw"></i> <span class="menu-text">二维码管理</span>
+								<span class="selected"></span>
+								</a>					
+							</li>
+							<li class="has-sub">
+								<a href="javascript:;" class="">
+								<i class="fa fa-bookmark-o fa-fw"></i> <span class="menu-text">运营管理</span>
+								<span class="arrow"></span>
+								</a>
+								<ul class="sub">
+									<li><a class="" href=""><span class="sub-menu-text">积分管理</span></a></li>
+									<li><a class="" href=""><span class="sub-menu-text">活动管理</span></a></li>
+								</ul>
+							</li>
+							<li><a class="" href=""><i class="fa fa-envelope-o fa-fw"></i> <span class="menu-text">产品管理</span></a></li>
+							<li class="has-sub">
+								<a href="javascript:;" class="">
+								<i class="fa fa-table fa-fw"></i> <span class="menu-text">数据报表</span>
+								<span class="arrow"></span>
+								</a>
+								<ul class="sub">
+									<li><a class="" href=""><span class="sub-menu-text">防伪码统计</span></a></li>
+									<li><a class="" href=""><span class="sub-menu-text">活动数据统计</span></a></li>
+								</ul>
+							</li>
+							<li class="has-sub">
+								<a href="javascript:;" class="">
+								<i class="fa fa-pencil-square-o fa-fw"></i> <span class="menu-text">增值功能</span>
+								<span class="arrow"></span>
+								</a>
+								<ul class="sub">
+									<li><a class="" href=""><span class="sub-menu-text">企业手机站</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+		<div id="main-content">
+			<div class="container">
+				<div class="row">
+					<div id="content" class="">
+						<div class="tabbable header-tabs">
+							<ul class="nav nav-tabs">
+								 <li class="active">
+								 	<a href="#box_tab1" data-toggle="tab">
+								 		<span class="hidden-inline-mobile">创建活动</span>
+								 		<i class="fa fa-times icon-close"></i>
+								 	</a>
+								 </li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane fade in active" id="box_tab1">
+									<form action="" id="create-activify">
+										<div class="form-group">
+											<label for="activify-name" class="">*活动名称：</label>
+											<input type="text" class="form-control" id="activify-name" placeholder="">
+										</div>
+										<div class="title">抽奖设置</div>
+										
+										<div class="create-setting">
+											<div class="title">奖品：</div>
+											<button type="button" class="btn btn-inverse btn-subActivity">减少奖项</button>
+											<button type="button" class="btn btn-inverse btn-addActivity">增加奖项</button>
+											<div class="form-inline">
+												<div class="form-group">
+													<label for="" class="">一等奖：</label>
+													<input type="text" class="form-control" id="" placeholder="">
+												</div>
+												<div class="form-group">
+													<label for="" class="">奖品数量：</label>
+													<input type="text" class="form-control" id="" placeholder="">
+												</div>
+											</div>
+											<div class="form-inline">
+												<div class="form-group">
+													<label for="" class="">二等奖：</label>
+													<input type="text" class="form-control" id="" placeholder="">
+												</div>
+												<div class="form-group">
+													<label for="" class="">奖品数量：</label>
+													<input type="text" class="form-control" id="" placeholder="">
+												</div>
+											</div>
+											<div class="form-inline">
+												<div class="form-group">
+													<label for="" class="">三等奖：</label>
+													<input type="text" class="form-control" id="" placeholder="">
+												</div>
+												<div class="form-group">
+													<label for="" class="">奖品数量：</label>
+													<input type="text" class="form-control" id="" placeholder="">
+												</div>
+											</div>
+										</div>
+									</form>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</section>
+
+	<script src="../js/jquery-2.1.0.js"></script>
+
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.flot.min.js"></script>
+	<script src="../js/bootstrapDatepickr-1.0.0/bootstrapDatepickr-1.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/script.js"></script>
+	<!--<script src="../js/Activity_detailed.js" type="text/javascript" charset="utf-8"></script>-->
+	<script>
+		jQuery('.sidebar-menu .has-sub > a').click(function () {
+			var last = jQuery('.has-sub.open', $('.sidebar-menu'));
+            last.removeClass("open");
+            jQuery('.arrow', last).removeClass("open");
+            jQuery('.sub', last).slideUp(200);
+            
+			var thisElement = $(this);
+			var slideOffeset = -200;
+            var slideSpeed = 200;
+			
+            var sub = jQuery(this).next();
+            if (sub.is(":visible")) {
+                jQuery('.arrow', jQuery(this)).removeClass("open");
+                jQuery(this).parent().removeClass("open");
+				sub.slideUp(slideSpeed, function () {
+					if ($('#sidebar').hasClass('sidebar-fixed') == false) {
+						App.scrollTo(thisElement, slideOffeset);
+					}
+					handleSidebarAndContentHeight();
+                });
+            } else {
+                jQuery('.arrow', jQuery(this)).addClass("open");
+                jQuery(this).parent().addClass("open");
+                sub.slideDown(slideSpeed, function () {
+					if ($('#sidebar').hasClass('sidebar-fixed') == false) {
+						App.scrollTo(thisElement, slideOffeset);
+					}
+					handleSidebarAndContentHeight();
+                });
+            }
+        });
+		
+
+		jQuery('.sidebar-menu .has-sub .sub .has-sub-sub > a').click(function () {
+            var last = jQuery('.has-sub-sub.open', $('.sidebar-menu'));
+            last.removeClass("open");
+            jQuery('.arrow', last).removeClass("open");
+            jQuery('.sub', last).slideUp(200);
+                
+            var sub = jQuery(this).next();
+            if (sub.is(":visible")) {
+                jQuery('.arrow', jQuery(this)).removeClass("open");
+                jQuery(this).parent().removeClass("open");
+                sub.slideUp(200);
+            } else {
+                jQuery('.arrow', jQuery(this)).addClass("open");
+                jQuery(this).parent().addClass("open");
+                sub.slideDown(200);
+            }
+        });
+        
+		var handleSidebarAndContentHeight = function () {
+	        var content = $('#content');
+	        var sidebar = $('#sidebar');
+	        var body = $('body');
+	        var height;
+	
+	        if (body.hasClass('sidebar-fixed')) {
+	            height = $(window).height() - $('#header').height() + 1;
+	        } else {
+	            height = sidebar.height() + 20;
+	        }
+	        if (height >= content.height()) {
+	            content.attr('style', 'min-height:' + height + 'px !important');
+	        }
+    	}
+		$(function(){
+			$("#calendar").bootstrapDatepickr();
+			
+		})
+	</script>
+</body>
+</html>

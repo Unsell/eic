@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>易云平台</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" type="text/css" href="css/cloud-admin.css" >
+	<link rel="stylesheet" type="text/css"  href="css/default.css" id="skin-switcher" >
+
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/Generate_product.css"/>
+
+</head>
+<body>
+	<!-- HEADER -->
+	<header class="navbar clearfix" id="header">
+		<div class="container">
+				<div class="navbar-brand">
+					<a href="index.html">
+						<img src="img/logo/logo.png" alt="易云 Logo" class="img-responsive" height="30" width="120">
+					</a>
+					<div class="visible-xs">
+						<a href="#" class="team-status-toggle switcher btn dropdown-toggle">
+							<i class="fa fa-users"></i>
+						</a>
+					</div>
+				</div>
+
+				<ul class="nav navbar-nav pull-right">
+
+					<li class="dropdown user" id="header-user">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<img alt="" src="img/avatars/avatar3.jpg" />
+							<span class="username">adam</span>
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#"><i class="fa fa-user"></i> 个人资料</a></li>
+							<!--
+							<li><a href="#"><i class="fa fa-cog"></i> 基础设置</a></li>
+							<li><a href="#"><i class="fa fa-eye"></i> Privacy Settings</a></li>
+							-->
+							<li><a href="login.html"><i class="fa fa-power-off"></i> 退出登录</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+		</div>
+
+	</header>
+	<!--/HEADER -->
+	<div class="copyrights"></div>
+	<!-- PAGE -->
+	<section id="page">
+		<!-- SIDEBAR -->
+		<div id="sidebar" class="sidebar">
+			<div class="sidebar-menu nav-collapse">
+
+				<ul>
+					<li class="active">
+						<a href="">
+						<i class="fa fa-tachometer fa-fw"></i> <span class="menu-text">导览</span>
+						<span class="selected"></span>
+						</a>					
+					</li>
+					<li>
+						<a href="">
+						<i class="fa fa-tachometer fa-fw"></i> <span class="menu-text">二维码管理</span>
+						<span class="selected"></span>
+						</a>					
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;" class="">
+						<i class="fa fa-bookmark-o fa-fw"></i> <span class="menu-text">运营管理</span>
+						<span class="arrow"></span>
+						</a>
+						<ul class="sub">
+							<li><a class="" href=""><span class="sub-menu-text">积分管理</span></a></li>
+							<li><a class="" href=""><span class="sub-menu-text">活动管理</span></a></li>
+						</ul>
+					</li>
+					<li><a class="" href=""><i class="fa fa-envelope-o fa-fw"></i> <span class="menu-text">产品管理</span></a></li>
+					<li class="has-sub">
+						<a href="javascript:;" class="">
+						<i class="fa fa-table fa-fw"></i> <span class="menu-text">数据报表</span>
+						<span class="arrow"></span>
+						</a>
+						<ul class="sub">
+							<li><a class="" href=""><span class="sub-menu-text">防伪码统计</span></a></li>
+							<li><a class="" href=""><span class="sub-menu-text">活动数据统计</span></a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;" class="">
+						<i class="fa fa-pencil-square-o fa-fw"></i> <span class="menu-text">增值功能</span>
+						<span class="arrow"></span>
+						</a>
+						<ul class="sub">
+							<li><a class="" href=""><span class="sub-menu-text">企业手机站</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="main-content">
+			<div class="container">
+				<div class="row">
+					<div id="content" class="">
+						<div class="tabbable header-tabs">
+							  <ul class="nav nav-tabs">
+								 <li class="active">
+								 	<a href="#box_tab1" data-toggle="tab">
+								 		<span class="hidden-inline-mobile">生成产品</span>
+								 		<i class="fa fa-times icon-close"></i>
+								 	</a>
+								 </li>
+							  </ul>
+							  <div class="tab-content">
+								<div class="tab-pane fade in active clearfix" id="box_tab1">
+									<div id="left-form">
+										<form class="form-horizontal" role="form" action="">
+											<div class="form-title">产品信息</div>
+											<div class="form-group">
+												<label>*产品名称:</label>
+												<div class="col-sm-4">
+												  <input type="text" id="product-name" class="form-control" placeholder="">
+												</div>
+											</div>
+											<div class="form-group">
+												<label>*产品类型:</label>
+												<div class="col-sm-4">
+													<select class="form-control" name="" id="product-type">
+													  	<option value="">1</option>
+													  	<option value="">2</option>
+													  	<option value="">3</option>
+													  	<option value="">4</option>
+													  </select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>*商品码:</label>
+												<div class="col-sm-4">
+													<input type="text" id="prodect-code" class="form-control" placeholder="">
+												</div>
+											</div>
+											<div class="form-group">
+												<label>零售价:</label>
+												<div class="col-sm-4">
+													<input type="text" id="product-retail" class="form-control" placeholder="">
+												</div>
+											</div>
+											<div class="form-group">
+												<label>保质期:</label>
+												<div class="col-sm-4">
+													<input type="text" id="ShelfLife-value" class="form-control" placeholder="">
+												</div>
+												<div class="col-sm-2 data-company">
+													<select class="form-control" name="" id="ShelfLife-company">
+													  	<option value="0">日</option>
+													  	<option value="1">月</option>
+													  	<option value="2">年</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>产品图片:</label>
+												<div class="col-sm-9">
+													<input class="file-update" type="file">
+													<button type="button" class="btn btn-default btn-update">上传</button>
+													<ul class="product-img clearfix">
+														<li class="list"><img src="" alt="" width="50px" height="50px" /></li>
+														<li class="list"><img src="" alt="" width="50px" height="50px" /></li>
+													</ul>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>产品详细:</label>
+												<div class="col-sm-11">
+													<div class="box border">
+									
+														<div class="box-body">
+															<div id="alerts"></div>
+															<div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+															  <div class="btn-group">
+																<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
+																  <ul class="dropdown-menu">
+																  </ul>
+																</div>
+															  <div class="btn-group">
+																<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+																  <ul class="dropdown-menu">
+																  <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
+																  <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
+																  <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
+																  </ul>
+															  </div>
+															  <div class="btn-group">
+																<a class="btn btn-default" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+																<a class="btn btn-default" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+																<a class="btn btn-default" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
+																<a class="btn btn-default" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+															  </div>
+															  <div class="btn-group">
+																<a class="btn btn-default" data-edit="insertunorderedlist" title="Bullet list"><i class="fa fa-list-ul"></i></a>
+																<a class="btn btn-default" data-edit="insertorderedlist" title="Number list"><i class="fa fa-list-ol"></i></a>
+																<a class="btn btn-default" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="fa fa-outdent"></i></a>
+																<a class="btn btn-default" data-edit="indent" title="Indent (Tab)"><i class="fa fa-indent"></i></a>
+															  </div>
+															  <div class="btn-group">
+																<a class="btn btn-default" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+																<a class="btn btn-default" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+																<a class="btn btn-default" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+																<a class="btn btn-default" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+															  </div>
+															  <div class="btn-group">
+																  <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="fa fa-link"></i></a>
+																	<div class="dropdown-menu input-append">
+																		<input class="span2" placeholder="URL" type="text" data-edit="createLink"/>
+																		<button class="btn btn-default" type="button">Add</button>
+																</div>
+																<a class="btn btn-default" data-edit="unlink" title="Remove Hyperlink"><i class="fa fa-scissors"></i></a>
+					
+															  </div>
+															  
+															  <!--<div class="btn-group">
+																<a class="btn btn-default" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+																<input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
+															  </div>-->
+															  <div class="btn-group">
+																<a class="btn btn-default" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+																<a class="btn btn-default" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+															  </div>
+															  <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
+															</div>
+															
+															<div id="editor">
+															  Go ahead&hellip;
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>产品参数:</label>
+												<div class="col-sm-9">
+													<button type="button" class="btn btn-default btn-addParameter">添加参数</button>
+													<ul class="parameter">
+														<!--<li class="list clearfix">
+															<input type="text" class="form-control parameter-name" placeholder="参数">
+															<input type="text" class="form-control parameter-value" placeholder="">
+															<div class="parameter-delete"><span class="fa fa-minus"></span></div>
+														</li>-->
+													</ul>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>官网地址:</label>
+												<div class="col-sm-5">
+													<input type="text" id="website" class="form-control " placeholder="">
+												</div>
+											</div>
+											<div class="form-group">
+												<label>购买地址:</label>
+												<div class="col-sm-5">
+													<input type="text" id="shopping" class="form-control " placeholder="">
+												</div>
+											</div>
+											<div class="form-group">
+												<label>推荐产品:</label>
+												<div class="col-sm-9">
+													<button type="button" class="btn btn-info">选择产品</button>
+													<div class="choics"></div>
+												</div>
+											</div>
+											<div class="form-title">设置</div>
+											<div class="form-group">
+												<label>积分:</label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control" placeholder="" value="0">
+												</div>
+											</div>
+											<div class="form-group">
+												<label>防伪:</label>
+												<div class="col-sm-4">
+													<input type="text" class="form-control" placeholder="" value="5">
+												</div>
+												<div class="col-sm-6 security-tip">当同一个二维码被扫描超过指定数量就记录为可疑码，0为不限制</div>
+											</div>
+										</form>
+									</div>
+									<div id="right-box">
+										<div class="box-phone">
+											<!--图片轮播-->
+											<div id="product-img" class="carousel slide" data-ride="carousel">
+												<!-- Indicators -->
+												<ol class="carousel-indicators">
+												    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+												    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+												    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+												</ol>
+												
+												<!-- Wrapper for slides -->
+												<div class="carousel-inner" role="listbox">
+												    <div class="item active">
+												      <img src="..." alt="...">
+												      <div class="carousel-caption">
+												        ...
+												      </div>
+												    </div>
+												    <div class="item">
+												      <img src="..." alt="...">
+												      <div class="carousel-caption">
+												        ...
+												      </div>
+												    </div>
+												    <div class="item">
+												      <img src="..." alt="...">
+												      <div class="carousel-caption">
+												        ...
+												      </div>
+												    </div>
+												</div>
+											</div>
+											<div class="box-product-infor">
+												<div class="infor-title clearfix">
+													<span class="product-name"></span>
+													<span class="product-retail"></span>
+												</div>
+												<div class="infor-content">
+													<div class="infor">
+														<span class="name">保质期</span>
+														<span class="ShelfLife-value"></span>
+														<span class="ShelfLife-company">日</span>
+													</div>
+												</div>
+												<div class="boundary"></div>
+											</div>
+											<div class="box-product-infor">
+												<div class="infor-title clearfix">
+													产品参数
+												</div>
+												<div class="infor-content">
+													<ul class="product-parameter">
+														<!--<li class="list">
+															配料：&nbsp;&nbsp;&nbsp;牛奶
+														</li>-->
+													</ul>
+												</div>
+												<div class="boundary"></div>
+											</div>
+											<div class="box-product-infor">
+												<div class="infor-title clearfix">
+													详细信息
+												</div>
+												<div class="infor-content" id="detailed">
+													
+												</div>
+												<div class="boundary"></div>
+											</div>
+											<div class="box-product-infor">
+												<a href="" class="btn btn-default btn-website">到官网瞧瞧</a>
+												<a href="" class="btn btn-default btn-shopping">到电商购买</a>
+											</div>
+										</div>
+									</div>
+									<div class="box-button">
+										  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+										  <button type="button" class="btn btn-default">生成</button>
+									</div>
+								</div>
+								
+							  </div>
+						   </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</section>
+
+	<script src="js/jquery-2.1.0.js"></script>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.flot.min.js"></script>
+	
+	<!-- BOOTSTRAP WYSIWYG bootstrap文本插件 -->
+	<script type="text/javascript" src="js/bootstrap-wysiwyg/jquery.hotkeys.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-wysiwyg/bootstrap-wysiwyg.min.js"></script>
+	
+	<script src="js/script.js"></script>
+	<script src="js/Generate_product.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		// 文本框
+		jQuery(document).ready(function() {		
+			App.setPage("rich_text_editors");  //Set current page
+			App.init(); //Initialise plugins and elements
+		});
+		jQuery('.sidebar-menu .has-sub > a').click(function () {
+			var last = jQuery('.has-sub.open', $('.sidebar-menu'));
+            last.removeClass("open");
+            jQuery('.arrow', last).removeClass("open");
+            jQuery('.sub', last).slideUp(200);
+            
+			var thisElement = $(this);
+			var slideOffeset = -200;
+            var slideSpeed = 200;
+			
+            var sub = jQuery(this).next();
+            if (sub.is(":visible")) {
+                jQuery('.arrow', jQuery(this)).removeClass("open");
+                jQuery(this).parent().removeClass("open");
+				sub.slideUp(slideSpeed, function () {
+					if ($('#sidebar').hasClass('sidebar-fixed') == false) {
+						App.scrollTo(thisElement, slideOffeset);
+					}
+					handleSidebarAndContentHeight();
+                });
+            } else {
+                jQuery('.arrow', jQuery(this)).addClass("open");
+                jQuery(this).parent().addClass("open");
+                sub.slideDown(slideSpeed, function () {
+					if ($('#sidebar').hasClass('sidebar-fixed') == false) {
+						App.scrollTo(thisElement, slideOffeset);
+					}
+					handleSidebarAndContentHeight();
+                });
+            }
+        });
+		
+
+		jQuery('.sidebar-menu .has-sub .sub .has-sub-sub > a').click(function () {
+            var last = jQuery('.has-sub-sub.open', $('.sidebar-menu'));
+            last.removeClass("open");
+            jQuery('.arrow', last).removeClass("open");
+            jQuery('.sub', last).slideUp(200);
+                
+            var sub = jQuery(this).next();
+            if (sub.is(":visible")) {
+                jQuery('.arrow', jQuery(this)).removeClass("open");
+                jQuery(this).parent().removeClass("open");
+                sub.slideUp(200);
+            } else {
+                jQuery('.arrow', jQuery(this)).addClass("open");
+                jQuery(this).parent().addClass("open");
+                sub.slideDown(200);
+            }
+        });
+        
+		var handleSidebarAndContentHeight = function () {
+	        var content = $('#content');
+	        var sidebar = $('#sidebar');
+	        var body = $('body');
+	        var height;
+	
+	        if (body.hasClass('sidebar-fixed')) {
+	            height = $(window).height() - $('#header').height() + 1;
+	        } else {
+	            height = sidebar.height() + 20;
+	        }
+	        if (height >= content.height()) {
+	            content.attr('style', 'min-height:' + height + 'px !important');
+	        }
+    	}
+	</script>
+</body>
+</html>
