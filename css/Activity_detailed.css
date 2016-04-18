@@ -50,6 +50,12 @@ i.icon-close:hover{
 .prize-list .list:first-child{
 	margin-top: 15px;
 }
+.prize-list .prize-name {
+	margin-left: 20px;
+}
+.prize-list .prize-name:first-child {
+	margin-left: 0;
+}
 .prize-list .prize-content {
 	display: inline-block;
 	min-width: 130px;

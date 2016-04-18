@@ -33,7 +33,9 @@ i.icon-close:hover{
 	padding: 30px 3% 30px 3%;
 	position: relative;
 }
-
+#create-activify>.form-group{
+	position: relative;
+}
 #create-activify>.form-group label{
 	display: inline-block;
 	font-size: 16px;
@@ -53,16 +55,23 @@ i.icon-close:hover{
 	display: inline-block;
 	font-size: 16px;
 	width: 120px;	
-	margin-bottom: 25px;
+	margin-bottom: 30px;
 }
 .create-setting .form-inline{
 	margin-left: 130px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
+}
+.create-setting .form-inline .form-group {
+	float: left;
 }
 .create-setting .form-inline .form-group label{
-	display: inline-block;
+	float: left;
 	font-size: 16px;
 	font-weight: 500;
+	margin-right: 5px;
+}
+.create-setting .form-inline .form-group input{
+	float: left;
 }
 .btn-subActivity, .btn-addActivity{
 	width: 120px;
@@ -71,14 +80,66 @@ i.icon-close:hover{
 .create-setting .form-inline .form-group{
 	margin-right: 40px;
 }
+.form-group #activity-time{
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+}
+.form-group .input-group-addon{
+	width: 37px;
+	height: 34px;
+	line-height: 20px;
+	display: inline-block;
+	margin-left: -4px;
+	cursor: pointer;
+}
+.form-group textarea{
+	display: inline-block;
+	resize:none;
+	width: 660px;
+}
+.form-group .count{
+	position: absolute;
+	bottom: 0;
+	left: 735px;
+	color: #AAAAAA;
+	font-size: 16px;
+}
 
-
-
-
-
-
-
-
-
-
+.prompt .title{
+	font-size: 16px;
+	width: 120px;	
+	margin-bottom: 30px;
+}
+.prompt .form-group{
+	position: relative;
+	margin-left: 50px;
+	margin-bottom: 20px;
+	overflow: auto;
+}
+.prompt .form-group label{
+	font-size: 16px;
+	font-weight: 500;
+	width: 70px;
+	margin-right: 5px;
+	float: left;
+}
+.prompt .form-group textarea{
+	float: left;
+}
+.prompt .form-group .count{
+	position: absolute;
+	bottom: 0;
+	left: 685px;
+	color: #AAAAAA;
+	font-size: 16px;
+}
+.btn-save{
+	width: 120px;
+	display: block;
+	margin: 30px 40% ;
+}
+input:focus, textarea:focus{
+	border-color: #66AFE9 !important;
+	box-shadow: 0 0 5px 5px #66AFE9;
+}
 
