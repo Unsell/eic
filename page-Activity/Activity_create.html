@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" >
 	<link rel="stylesheet" type="text/css" href="../css/cloud-admin.css" >
 	<link rel="stylesheet" type="text/css"  href="../css/default.css" id="skin-switcher" >
 
@@ -195,7 +196,17 @@
 										</div>
 										<button type="button" class="btn btn-default btn-save">保存</button>
 									</form>
-									
+									<!--时间选择弹窗-->
+									<div class="box-activity-time clearfix">
+										<div class="title"><span>抽奖起止时间</span></div>
+										<div class="startDatetime"></div>
+		              					<div class="endDatetime"></div>
+		              					<div class="box-button">
+		              						<button type="button" class="btn btn-default btn-cancle">取消</button>
+		              						<button type="button" class="btn btn-success btn-confirm">确定</button>
+		              					</div>
+									</div>
+										
 								</div>
 							</div>
 						</div>
@@ -203,28 +214,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="tt-time-date-picker" id="date-time-picker" style="top: 21px; left: 0px; display:none;">
-	      <ul class="tab-bar">
-	        <li class="item-tab active" data-type="date">起止时间</li>
-	      </ul>
-	      <div class="cont-box" data-name="date-time-picker-content">
-	        <div class="date-container">
-	          <div data-name="date-time-picker-date">
-	            <div class="daterangepicker dropdown-menu show-calendar open" style="top: 255px; right: 0px; left: auto;">
-	              <div class="startDatetime calendar first left"></div>
-	              <div class="endDatetime calendar second right"></div>
-	              <div class="ranges">
-	                <div class="range_inputs">
-	                  <button class="applyBtn btn btn-small btn-sm btn-success" type="button">确定</button>
-	                  &nbsp;
-	                  <button class="cancelBtn btn btn-small btn-sm btn-default" type="button">取消</button>
-	                </div>
-	              </div>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-	    </div>
+		
 		
 	</section>
 

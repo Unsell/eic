@@ -42,7 +42,6 @@ $(function(){
 		if(editor!==detailed){
 			$('#detailed').html(editor);
 		}
-		
 	})
 	
 	//保质期单位修改
@@ -61,7 +60,7 @@ $(function(){
 		li.id = 'parameter_'+argument;
 		var str = '<input type="text" class="form-control parameter-name" placeholder="参数">'+
 					'<input type="text" class="form-control parameter-value" placeholder="">'+
-					'<div class="parameter-delete"><span class="fa fa-minus"></span></div>';
+					'<div class="parameter-delete" title="删除"><span class="fa fa-minus"></span></div>';
 		li.innerHTML = str;
 		parameter.append(li);
 		
@@ -81,7 +80,25 @@ $(function(){
 		$('.'+parendId).remove();
 	});
 	
-	
+//	$('.btn-generate').click(function(){
+//		var parameter = {};
+//		var i=1;
+//		var str = "[";
+//		for(i; i<argument; i++){
+//			var par = $('#parameter_'+i);
+//			var name = par.find('.parameter-name').val();
+//			var val = par.find('.parameter-value').val();
+//			if(name!=undefined&&val!=undefined){
+//				str+= '{"'+name+'":"'+val+'"},';
+//			}
+//			
+//		}
+//		str=str.substring(0,str.length-1);
+//		str+="]";
+//		console.log(str);
+//		parameter = JSON.parse(str);
+//		console.log(parameter);
+//	})
 })
 
 
