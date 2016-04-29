@@ -44,7 +44,11 @@ i.icon-close:hover{
 }
 #create-activify .form-group input{
 	display: inline-block;
-	width: 230px;
+	width: 200px;
+}
+#create-activify .form-group .grade-name{
+	width: 150px;
+	margin-right: 20px;
 }
 #create-activify>.title{
 	font-size: 19px;
@@ -73,12 +77,15 @@ i.icon-close:hover{
 .create-setting .form-inline .form-group input{
 	float: left;
 }
+
 .btn-subActivity, .btn-addActivity{
 	width: 120px;
 	margin-right: 20px;
 }
 .create-setting .form-inline .form-group{
 	margin-right: 40px;
+	margin-bottom: 15px;
+	position: relative;
 }
 .form-group #activity-time{
 	border-bottom-right-radius: 0;
@@ -95,16 +102,18 @@ i.icon-close:hover{
 .form-group textarea{
 	display: inline-block;
 	resize:none;
-	width: 660px;
+	width: 695px;
 }
 .form-group .count{
 	position: absolute;
 	bottom: 0;
-	left: 735px;
+	left: 770px;
 	color: #AAAAAA;
 	font-size: 16px;
 }
-
+.form-inline .form-group .count{
+	left: 640px;
+}
 .prompt .title{
 	font-size: 16px;
 	width: 120px;	
@@ -112,14 +121,14 @@ i.icon-close:hover{
 }
 .prompt .form-group{
 	position: relative;
-	margin-left: 50px;
 	margin-bottom: 20px;
+	margin-left: 20px;
 	overflow: auto;
 }
 .prompt .form-group label{
 	font-size: 16px;
 	font-weight: 500;
-	width: 70px;
+	width: 100px;
 	margin-right: 5px;
 	float: left;
 }
@@ -129,7 +138,7 @@ i.icon-close:hover{
 .prompt .form-group .count{
 	position: absolute;
 	bottom: 0;
-	left: 685px;
+	left: 715px;
 	color: #AAAAAA;
 	font-size: 16px;
 }

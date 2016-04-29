@@ -7,12 +7,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" >
 	<link rel="stylesheet" type="text/css" href="../css/cloud-admin.css" >
 	<link rel="stylesheet" type="text/css"  href="../css/default.css" id="skin-switcher" >
 
 	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../js/bootstrapDatepickr-1.0.0/bootstrapDatepickr-1.0.0.min.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/Activity_table.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap-datetimepicker.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/Activity_create.css"/>
 
 
 </head>
@@ -115,110 +117,96 @@
 							<ul class="nav nav-tabs">
 								 <li class="active">
 								 	<a href="#box_tab1" data-toggle="tab">
-								 		<span class="hidden-inline-mobile">活动管理</span>
+								 		<span class="hidden-inline-mobile">创建活动</span>
 								 		<i class="fa fa-times icon-close"></i>
 								 	</a>
 								 </li>
 							</ul>
 							<div class="tab-content">
 								<div class="tab-pane fade in active" id="box_tab1">
-									
-									<div class="form-search">
-										<form action="" class="form-inline clearfix">
-											<div class="form-group">
-										    	<label for="activityType">活动类型 :</label>
-										    	<select class="form-control" id="activityType">
-												  	<option>请选择</option>
-												  	<option>手机抽奖</option>
-												  	<option>促销购买</option>
-												</select>
-										  	</div>
-										  	<div class="form-group">
-										    	<label for="activityStatus">活动状态 :</label>
-										    	<select class="form-control" id="activityStatus">
-													<option>请选择</option>
-													<option>未开始</option>
-													<option>进行中</option>
-													<option>已结束</option>
-													<option>已关闭</option>
-												</select>
-										  	</div>
-										  	<div class="input-group">
-										  		<label for="calendar">创建时间 :</label>
-												<input type="text" id="calendar" placeholder="yyyy/mm/dd" class="form-control">
-												<span class="input-group-addon" id="basic-addon1"><i class="fa fa-calendar"></i></span>
-											</div>
-										  	<div class="input-group">
-										  		<label for="keyword">关键字 :</label>
-											  	<input type="text" class="form-control" id="keyword">
-											  	<span class="input-group-btn">
-													<button class="btn btn-default btn-search" type="button">搜索</button>
-											  	</span>
-											</div>
-										</form>
-									</div>
-									<div class="box-table-product clearfix">
-										<div class="btn-group dropdown create-activity">
-											<button class="btn btn-create">创建活动</button>
-											<button class="btn btn-create dropdown-toggle" data-toggle="dropdown">
-												<span class="caret"></span>
-											</button>
-											<ul class="dropdown-menu">
-												<li>
-													<a href="#">手机抽奖</a>
-												</li>
-												<li>
-													<a href="#">促销购买</a>
-												</li>
-												<!--<li>
-													<a href="#">Something else here</a>
-												</li>
-												<li class="divider"></li>
-												<li>
-													<a href="#">Separated link</a>
-												</li>-->
-											</ul>
+									<form action="" id="create-activify">
+										<div class="form-group input-append date form_datetime">
+											<label for="activify-name" class="">*活动名称：</label>
+											<input type="text" class="form-control" id="activify-name" placeholder="">
 										</div>
+										<div class="title">抽奖设置</div>
 										
-										<table class="table table-bordered table-product">
-											<thead>
-											  <tr>
-												<th>序号</th>
-												<th>活动名称</th>
-												<th>活动类型</th>
-												<th>活动状态</th>
-												<th>创建时间</th>
-												<th>操作</th>
-											  </tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>1</td>
-													<td>蒙牛手机抽奖</td>
-													<td>手机抽奖</td>
-													<td>未开始</td>
-													<td>2016-03-17</td>
-													<td>
-														<a href="">查看</a>
-														<a href="javascript:0;">开启活动</a>
-														<a href="#delete-product" class="delete-product" data-toggle="modal">删除</a>
-													</td>
-												</tr>
-											  	<tr>
-													<td>2</td>
-													<td>金龙鱼五一促销活动</td>
-													<td>促销购买</td>
-													<td>进行中</td>
-													<td>2016-04-17</td>
-													<td>
-														<a href="">查看</a>
-														<a href="javascript:0;">关闭活动</a>
-														<a href="#delete-product" class="delete-product" data-toggle="modal">删除</a>
-													</td>
-												</tr>
-											</tbody>
-										</table>
+										<div class="create-setting">
+											<div class="title">奖品：</div>
+											<button type="button" class="btn btn-inverse btn-subActivity">减少奖项</button>
+											<button type="button" class="btn btn-inverse btn-addActivity">增加奖项</button>
+											<div class="form-inline clearfix" id="Grade_1">
+												<div class="form-group ">
+													<label for="" class="">一等奖：</label>
+													<input type="text" class="form-control" id="" placeholder="">
+												</div>
+												<div class="form-group ">
+													<label for="" class="">奖品数量：</label>
+													<input type="text" class="form-control" id="" placeholder="">
+												</div>
+											</div>
+											<div class="form-inline clearfix" id="Grade_2">
+												<div class="form-group ">
+													<label for="" class="">二等奖：</label>
+													<input type="text" class="form-control" id="" placeholder="">
+												</div>
+												<div class="form-group ">
+													<label for="" class="">奖品数量：</label>
+													<input type="text" class="form-control" id="" placeholder="">
+												</div>
+											</div>
+											<div class="form-inline clearfix" id="Grade_3">
+												<div class="form-group ">
+													<label for="" class="">三等奖：</label>
+													<input type="text" class="form-control" id="" placeholder="">
+												</div>
+												<div class="form-group ">
+													<label for="" class="">奖品数量：</label>
+													<input type="text" class="form-control" id="" placeholder="">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="activity-time">抽奖时间 ：</label>
+											<input type="text" id="activity-time" placeholder="" class="form-control" data-date-format="yyyy-mm-dd hh:ii">
+											<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+										</div>
+										<div class="form-group">
+											<label for="">未中奖提示语 ：</label>
+											<textarea class="form-control" name="" rows="3" cols="" maxlength="30">很遗憾，您没有中奖</textarea>
+											<div class="count"><span>9</span>/30</div>
+										</div>
+										<div class="prompt">
+											<div class="title">中奖提示语：</div>
+											<div class="form-group clearfix" id="Prompt_1">
+												<label for="">一等奖 ：</label>
+												<textarea class="form-control" name="" rows="3" cols="" maxlength="30"></textarea>
+												<div class="count"><span>0</span>/30</div>
+											</div>
+											<div class="form-group clearfix" id="Prompt_2">
+												<label for="">二等奖 ：</label>
+												<textarea class="form-control" name="" rows="3" cols="" maxlength="30"></textarea>
+												<div class="count"><span>0</span>/30</div>
+											</div>
+											<div class="form-group clearfix" id="Prompt_3">
+												<label for="">三等奖 ：</label>
+												<textarea class="form-control" name="" rows="3" cols="" maxlength="30"></textarea>
+												<div class="count"><span>0</span>/30</div>
+											</div>
+										</div>
+										<button type="button" class="btn btn-default btn-save">保存</button>
+									</form>
+									<!--时间选择弹窗-->
+									<div class="box-activity-time clearfix">
+										<div class="title"><span>抽奖起止时间</span></div>
+										<div class="startDatetime"></div>
+		              					<div class="endDatetime"></div>
+		              					<div class="box-button">
+		              						<button type="button" class="btn btn-default btn-cancle">取消</button>
+		              						<button type="button" class="btn btn-success btn-confirm">确定</button>
+		              					</div>
 									</div>
+										
 								</div>
 							</div>
 						</div>
@@ -228,32 +216,6 @@
 		</div>
 		
 		
-		<!--弹窗-删除-->
-		<div class="modal fade" id="delete-product" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-			  <div class="modal-content">
-				<div class="modal-header">
-				  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				  <h4 class="modal-title">提示</h4>
-				</div>
-				<div class="modal-body">
-				  删除活动不能恢复，活动删除后，用户扫描二维码不会出现活动入口，确定删除？
-				</div>
-				<div class="modal-footer">
-				  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-				  <button type="button" class="btn btn-primary">确定</button>
-				</div>
-			  </div>
-			</div>
-		</div>
-		
-		<!--弹窗-放大二维码-->
-		<div class="backdrop popup-QRcode">
-			<div class="box-QRcode">
-				<span class="close-popup"><i class="fa fa-times"></i></span>
-				<img src="" width="100%" height="100%"/>
-			</div>
-		</div>
 	</section>
 
 	<script src="../js/jquery-2.1.0.js"></script>
@@ -262,9 +224,13 @@
 	<script src="../js/jquery.flot.min.js"></script>
 	<script src="../js/bootstrapDatepickr-1.0.0/bootstrapDatepickr-1.0.0.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/script.js"></script>
+	<script src="../js/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/Activity_table.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/Activity_create.js" type="text/javascript" charset="utf-8"></script>
 	<script>
+//	$(".form_datetime").datetimepicker({
+//      format: "dd MM yyyy - hh:ii"
+//  });
 		jQuery('.sidebar-menu .has-sub > a').click(function () {
 			var last = jQuery('.has-sub.open', $('.sidebar-menu'));
             last.removeClass("open");

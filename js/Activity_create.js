@@ -9,8 +9,8 @@ $(function(){
 		return;
 	});
 	// 增加奖项
-	var prizeNums = 3;
-	var prizeName = {1:'一等奖', 2: '二等奖', 3: '三等奖', 4: '四等奖', 5: '五等奖', 6: '六等奖'};
+	var prizeNums = 1;
+//	var prizeName = {1:'一等奖', 2: '二等奖', 3: '三等奖', 4: '四等奖', 5: '五等奖', 6: '六等奖'};
 	$('.btn-addActivity').click(function(){
 		if(prizeNums<6){
 			prizeNums++;
@@ -21,24 +21,20 @@ $(function(){
 			GradeDiv.className = 'form-inline clearfix';
 			GradeDiv.id = 'Grade_' + prizeNums;
 			var str1 = '<div class="form-group">'+
-							'<label for="" class="">'+prizeName[prizeNums]+'：</label>'+
-							'<input type="text" class="form-control" id="" placeholder="">'+
+							'<input type="text"class="form-control grade-name" id="" value="" placeholder="奖项名称" />'+
+							'<input type="text" class="form-control prize-name" id="" placeholder="奖品">'+
 						'</div>'+
 						'<div class="form-group">'+
 							'<label for="" class="">奖品数量：</label>'+
-							'<input type="text" class="form-control" id="" placeholder="">'+
+							'<input type="text" class="form-control prize-nums" id="" placeholder="">'+
+						'</div>'+
+						'<div class="form-group clearfix Grade_'+prizeNums+'" >'+
+							'<textarea class="form-control" name="" rows="3" cols="" maxlength="30" placeholder="中奖提示语"></textarea>'+
+							'<div class="count"><span>0</span>/30</div>'+
 						'</div>';
 			GradeDiv.innerHTML = str1;
 			GradeParent.append(GradeDiv);
 			
-			var PromptDiv = document.createElement('div');
-			PromptDiv.className = 'form-group clearfix';
-			PromptDiv.id = 'Prompt_' + prizeNums;
-			var str2 = '<label for="" class="">'+prizeName[prizeNums]+'：</label>'+
-						'<textarea class="form-control" name="" rows="3" cols=""  maxlength="30"></textarea>'+
-						'<div class="count"><span>0</span>/30</div>';
-			PromptDiv.innerHTML = str2;
-			PromptParent.append(PromptDiv);
 			return;
 		}else{
 			return;
@@ -50,13 +46,52 @@ $(function(){
 		if(prizeNums>1){
 			
 			$('#Grade_'+prizeNums).remove();
-			$('#Prompt_'+prizeNums).remove();
+			$('.Grade_'+prizeNums).remove();
 			prizeNums--;
 		}else{
 			return;
 		}
+	});
+	// 监听输入的奖项名称
+	$('.create-setting').on('input', '.grade-name', function(){
+		
+		var Grade = $(this).parent().parent().attr('id');
+		$('.'+Grade).find('label').html( $(this).val()+'：' );
 		
 	});
+	
+	// 获得设置奖项的数据
+	$('.btn-save').click(function(){
+		
+		var prize = {};
+		var i=1;
+		var str = "[";
+		for(i; i<=6; i++){
+			var grade = $('#Grade_'+i);
+			var prizeName = grade.find('.prize-name').val();
+			var gradeNums = grade.find('.prize-nums').val();
+			var gradeTips = $('.Grade_'+i).find('textarea').val();
+			var gradeName = grade.find('.grade-name').val();
+			
+			if(prizeName==undefined&&gradeNums==undefined&&gradeTips==undefined){
+				break;
+			}
+			if(prizeName!=''&&gradeNums!=''&&gradeTips!=''&&gradeName!=''){
+				str+= '{"prize_name":"'+gradeName+'","award_name":"'+prizeName+'","award_nums":"'+gradeNums+'","award_text":"'+ gradeTips +'"},';
+			}
+			
+		}
+		str=str.substring(0,str.length-1);
+		str+="]";
+		console.log(str);
+		prize = JSON.parse(str);
+		console.log(prize);
+		
+	});
+	
+	
+	
+	
 	// 选择抽奖时间
 	$('#activity-time').click(function(){
 		
@@ -89,8 +124,10 @@ $(function(){
 		var data = new Date();
 		var nowDay = data.getFullYear() + "-" + ("0" + (data.getMonth() + 1)).slice(-2) + "-" + ("0" + (data.getDate())).slice(-2);
 		
-		$('.startDatetime').attr("data-sdate", nowDay);
-		$('.endDatetime').attr("data-edate", nowDay);
+		if($('.startDatetime').attr("data-sdate")==undefined&&$('.endDatetime').attr("data-sdate")==undefined){
+			$('.startDatetime').attr("data-sdate", nowDay);
+			$('.endDatetime').attr("data-edate", nowDay);
+		}
 		
 		
 		
@@ -175,6 +212,9 @@ $(function(){
 		"5": "星期五",
 		"6": "星期六"
 	};
+	
+	
+	
 	
 });
 

@@ -59,9 +59,11 @@ i.icon-close:hover{
 	float: left;
 	width: 65%;
 }
-#left-form .form-group label{
+#left-form .form-group>label{
 	float: left;
-	width: 70px;
+	width: 75px;
+	font-size: 15px;
+	font-weight: 400;
 }
 
 .form-horizontal .form-group{
@@ -137,16 +139,35 @@ i.icon-close:hover{
 }
 .box.border, .box.border .box-body{
 	max-width: 841px;
+	position: relative;
 }
 .form-group .security-tip{
 	height: 35px;
 	line-height: 35px;
 	padding-left: 0;
 }
+/*图片上传*/
+.box.border.inverse {
+    border: 1px solid #C4C4C4;
+}
+
+/*产品详细*/
+body{
+	position: relative;
+}
+
+/*推荐产品*/
+.recommend-product .checkbox{
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+.recommend-product .checkbox input{
+	cursor: pointer;
+}
 /*右边模块*/
 #right-box{
 	position: fixed;
-	right: 12%;
+	right: 10%;
 	top: 120px;
 	width: 360px;
 	height: 600px;
@@ -160,12 +181,24 @@ i.icon-close:hover{
 	height: 440px;
 	margin: 72px 35px 80px 80px;
 	overflow: auto;
+	background-color: white;
 }
 #product-img{
-	width: 94%;
-	height: 160px;
+	width: 100%;
+	height: 140px;
 	margin: 0 auto;
 	position: relative;
+}
+#product-img .carousel-indicators{
+	bottom: -5px;
+}
+#product-img .carousel-inner, #product-img .carousel-inner .item{
+	width: 100%;
+	height: 140px;
+}
+#product-img .carousel-inner .item img{
+	width: 100%;
+	height: 100%;
 }
 .box-product-infor{
 	width: 100%;
@@ -175,35 +208,51 @@ i.icon-close:hover{
 .box-product-infor .infor-title{
 	width: 92%;
 	height: auto;
-	margin: 0 auto;
-	border-bottom: 1px dashed black;
+	margin: 0 auto 10px;
+	color: #565656;
+	font-size: 18px;
 }
 .box-product-infor .infor-title .product-name{
-	margin-left: 5px;
+	color: #4AA5FF;
+	font-size: 18px;
+	line-height: 28px;
 }
 .box-product-infor .infor-title .product-retail{
 	float: right;
-	margin-right: 5px;
+	color: #FF5B4F;
+	font-size: 19px;
 }
 .box-product-infor .infor-content{
 	width: 92%;
 	height: auto;
 	margin: 0 auto 10px;
-	padding-top: 5px;
 	word-break: break-all;
 	word-wrap:break-word;
+	color: #737373;
+	font-size: 13px;
+}
+.box-product-infor .infor-content .infor{
+	font-size: 15px;
 }
 .infor-content .infor .name{
 	margin-right: 15px;
 }
 .box-product-infor .boundary{
 	width: 100%;
-	height: 15px;
-	background-color: #999999;
+	height: 10px;
+	background-color: #F5F5F5;
 }
 .box-product-infor .btn-website, .box-product-infor .btn-shopping{
 	width: 60%;
 	margin: 0 20% 15px;
+	border: none;
+	color: white;
+}
+.box-product-infor .btn-website{
+	background-color: #4AA5FF;
+}
+.box-product-infor .btn-shopping{
+	background-color: #DADADA;
 }
 .product-parameter{
 	padding: 0;
@@ -212,7 +261,94 @@ i.icon-close:hover{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	font-size: 13px;
 }
+.product-parameter li .name{
+	float: left;
+	width: 65px;
+}
+.product-parameter li .content{
+	float: right;
+	width: 157px;
+}
+/*底部图片轮播*/
+
+.recommend-img{
+	list-style-type: none;
+	margin: 10px auto 0;
+	padding: 0;
+	width: 180px;
+	height: 90px;
+	text-align: center;
+	position: relative;
+}
+.box-product-infor .img-prev{
+	color: #4AA5FF;
+	font-size: 20px;
+	line-height: 1;
+	float: left;
+	margin-left: 4%;
+	margin-top: 20px;
+	display: none;
+}
+.box-product-infor .img-next{
+	color: #4AA5FF;
+	font-size: 20px;
+	line-height: 1;
+	float: right;
+	margin-right: 4%;
+	margin-top: 20px;
+	font-weight: 400;
+	display: none;
+}
+.recommend-img .slick-prev{
+	position: absolute;
+	left: -25px;
+	top: 18px;
+	width: 20px;
+	height: 20px;
+	text-indent:-9999px;
+	opacity: 0;
+}
+.recommend-img .slick-next{
+	position: absolute;
+	right: -25px;
+	top: 18px;
+	width: 20px;
+	height: 20px;
+	text-indent:-9999px;
+	opacity: 0;
+}
+.recommend-img .list{
+	width: 50px;
+	height: 90px;
+	display: inline-block;
+	margin-right: 5px;
+}
+.recommend-img .list:last-child{
+	margin-right: 0;
+}
+.recommend-img .list img{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	margin-bottom: 5px;
+	border: 1px solid #DADADA;
+}
+.recommend-img .list .name{
+	color: #737373;
+	font-size: 12px;
+	line-height: 1.1;
+	width: 50px;
+	height: 45px;
+	overflow: hidden;
+	text-align: left;
+	text-overflow: ellipsis;
+}
+
+
+
+
 .box-button{
 	float: left;
 	width: 100%;
@@ -222,4 +358,3 @@ i.icon-close:hover{
 .box-button button{
 	width: 120px;
 }
-
